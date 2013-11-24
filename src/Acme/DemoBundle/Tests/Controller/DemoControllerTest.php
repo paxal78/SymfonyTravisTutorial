@@ -10,7 +10,7 @@ class DemoControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/dsemo/hello/Fabien');
+        $crawler = $client->request('GET', '/demos/hello/Fabien');
 
         $this->assertGreaterThan(0, $crawler->filter('html:contains("Hello Fabien")')->count());
     }
